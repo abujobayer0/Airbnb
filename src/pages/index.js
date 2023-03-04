@@ -17,10 +17,11 @@ export default function Home({ data }) {
           <h1 className="text-3xl sm:text-4xl  font-semibold pb-5">
             Explore Nearby
           </h1>
-
-          {data?.map((item, indx) => (
-            <Smallcard data={item} key={indx} />
-          ))}
+          <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {data?.map((item, indx) => (
+              <Smallcard data={item} key={indx} />
+            ))}
+          </div>
         </section>
       </main>
     </>
